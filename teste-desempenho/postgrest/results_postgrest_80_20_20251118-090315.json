@@ -1,0 +1,39 @@
+{
+  "ferramenta": "PostgREST",
+  "cenario": "80/20",
+  "timestamp": "20251118-090315",
+  "testes": {
+    "load": {
+      "avg_ms": 2.1141853066407523,
+      "p95_ms": 3.3188299999999997,
+      "throughput_rps": 101.39973077608727,
+      "fail_rate": 0,
+      "success_rate": 1,
+      "peak_mem_gb": 0.03874
+    },
+    "stress": {
+      "avg_ms": 1.9889658729500506,
+      "p95_ms": 3.377625,
+      "throughput_rps": 200.94028249836995,
+      "fail_rate": 0,
+      "success_rate": 1,
+      "peak_mem_gb": 0.040127
+    },
+    "spike": {
+      "avg_ms": 2.0515430280558604,
+      "p95_ms": 3.611755000000006,
+      "throughput_rps": 269.6588944565372,
+      "fail_rate": 0,
+      "success_rate": 1,
+      "peak_mem_gb": 0.045693
+    },
+    "soak": {
+      "avg_ms": 2.110327024433913,
+      "p95_ms": 3.411565000000001,
+      "throughput_rps": 65.1398918217475,
+      "fail_rate": 0,
+      "success_rate": 1,
+      "peak_mem_gb": 0.045918
+    }
+  }
+}

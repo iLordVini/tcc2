@@ -1,0 +1,8 @@
+{
+  "hint": "postgrest_api",
+  "tag": "soak",
+  "started_at": "2025-11-18T09:27:29.620873",
+  "ended_at": "2025-11-18T09:47:32.524452",
+  "peak_mem_gb": 0.045918,
+  "cmd_rc": 0
+}

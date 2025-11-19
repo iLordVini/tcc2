@@ -1,0 +1,8 @@
+{
+  "hint": "postgrest_api",
+  "tag": "load",
+  "started_at": "2025-11-18T09:03:15.483380",
+  "ended_at": "2025-11-18T09:14:16.837734",
+  "peak_mem_gb": 0.03874,
+  "cmd_rc": 0
+}
