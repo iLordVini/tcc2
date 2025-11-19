@@ -1,0 +1,22 @@
+services:
+  prest:
+    image: prest/prest:latest
+    container_name: prest_api
+    restart: always
+    environment:
+      PREST_PG_HOST: postgres_database
+      PREST_PG_PORT: 5432
+      PREST_PG_USER: admin
+      PREST_PG_PASS: admin123
+      PREST_PG_DATABASE: marketplace
+      PREST_HTTP_PORT: 3000
+      PREST_JWT_DEFAULT: false
+    ports:
+      - "3001:3000"
+    networks:
+      - test_network
+
+networks:
+  test_network:
+    external: true
+    name: test_network

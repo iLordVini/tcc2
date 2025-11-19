@@ -1,0 +1,510 @@
+type: collection.insomnia.rest/5.0
+name: TCC 2 - HTTP
+meta:
+  id: wrk_ffd543e169a44ab1845539ff43523abe
+  created: 1762187359782
+  modified: 1762187359782
+  description: ""
+collection:
+  - name: PostgREST
+    meta:
+      id: fld_f79ab77b4b344fe4ad469528efc84752
+      created: 1762116996605
+      modified: 1762116996605
+      sortKey: -1762116996605
+      description: ""
+    children:
+      - url: "{{ postgrest_url }}/products?id=eq.1"
+        name: HTTP - GET
+        meta:
+          id: req_f79edb9e12c54ca5968a4d2dab139188
+          created: 1762116996606
+          modified: 1763437890994
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996606
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ postgrest_url }}/products"
+        name: HTTP - POST
+        meta:
+          id: req_3046ed90b98841948f9a9e19f50ddffd
+          created: 1762116996607
+          modified: 1763438021982
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996607
+        method: POST
+        body:
+          mimeType: application/json
+          text: '{"name":"Produto Teste PostgREST","price":1}'
+        headers:
+          - id: pair_42956add16284475b18efccc2451b325
+            name: Prefer
+            value: " return=representation"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ postgrest_url }}/user_account?id=eq.101"
+        name: HTTP - PUT
+        meta:
+          id: req_320b5e9cb2f6428dbab614de8f059aa3
+          created: 1762116996608
+          modified: 1762119622297
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996608
+        method: PUT
+        body:
+          mimeType: application/json
+          text: '{"id": 101, "name":"Atualizado
+            PostgREST","email":"postgrest_upd@example.com"}'
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ postgrest_url }}/user_account?id=eq.1"
+        name: HTTP - PATCH
+        meta:
+          id: req_3fa8e2a3217f4d5a9a7fc7c0e7722669
+          created: 1762116996609
+          modified: 1762116996609
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996609
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: '{"email":"postgrest_patch@example.com"}'
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ postgrest_url }}/user_account?id=eq.1"
+        name: HTTP - DELETE
+        meta:
+          id: req_c30f8fe7cebb4dc6b33bb51fccedafa0
+          created: 1762116996611
+          modified: 1762623008094
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996611
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: pREST
+    meta:
+      id: fld_2273bde406674fb2800c5ba9a6cb9ff4
+      created: 1762116996612
+      modified: 1762116996612
+      sortKey: -1762116996612
+      description: ""
+    children:
+      - url: "{{ prest_url }}/products?id=1"
+        name: HTTP - GET
+        meta:
+          id: req_b1a2f114e2684e34a6e9b78972c906e6
+          created: 1762116996613
+          modified: 1763437943858
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996613
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ prest_url }}/products"
+        name: HTTP - POST
+        meta:
+          id: req_f6e4bf8af9264720a2110452fc89a617
+          created: 1762116996615
+          modified: 1763438044503
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996615
+        method: POST
+        body:
+          mimeType: application/json
+          text: '{"name":"Produto Teste pREST","price":1}'
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ prest_url }}/user_account?id=102"
+        name: HTTP - PUT
+        meta:
+          id: req_4e35274c1f7e4f6ca0cdeda23f6edbb0
+          created: 1762116996616
+          modified: 1762119646924
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996616
+        method: PUT
+        body:
+          mimeType: application/json
+          text: '{"name":"Atualizado pREST","email":"prest_upd@example.com"}'
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ prest_url }}/user_account?id=1"
+        name: HTTP - PATCH
+        meta:
+          id: req_dbab2f0658184d91a0268463d05f2ffd
+          created: 1762116996618
+          modified: 1762116996618
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996618
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: '{"email":"prest_patch@example.com"}'
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ prest_url }}/order_items?id=2"
+        name: HTTP - DELETE
+        meta:
+          id: req_e53879f6842a4a42ae946a16543dcf25
+          created: 1762116996619
+          modified: 1762123676160
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996619
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: DreamFactory
+    meta:
+      id: fld_0799d99c8a86407cadc8e1ea8a82b368
+      created: 1762116996620
+      modified: 1762116996620
+      sortKey: -1762116996620
+      description: ""
+    children:
+      - url: "{{ dreamfactory_url }}/products/1"
+        name: HTTP - GET
+        meta:
+          id: req_be3d1eed7c9343b691f6062659e31073
+          created: 1762116996621
+          modified: 1763437954348
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996621
+        method: GET
+        headers:
+          - name: X-DreamFactory-Api-Key
+            value: "{{ dreamfactory_key }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ dreamfactory_url }}/products"
+        name: HTTP - POST
+        meta:
+          id: req_6125f249d6c34625ba152a9534c3f4aa
+          created: 1762116996622
+          modified: 1763438067417
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996622
+        method: POST
+        body:
+          mimeType: application/json
+          text: '{"resource":[{"name":"Produto Teste DreamFactory","price":1}]}'
+        headers:
+          - name: X-DreamFactory-Api-Key
+            value: "{{ dreamfactory_key }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ dreamfactory_url }}/user_account/103"
+        name: HTTP - PUT
+        meta:
+          id: req_9cef64a95dd9422fbcf2bf287d8a447f
+          created: 1762116996623
+          modified: 1762119684476
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996623
+        method: PUT
+        body:
+          mimeType: application/json
+          text: '{"name":"Atualizado
+            DreamFactory","email":"dreamfactory_upd@example.com"}'
+        headers:
+          - name: X-DreamFactory-Api-Key
+            value: "{{ dreamfactory_key }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ dreamfactory_url }}/user_account/1"
+        name: HTTP - PATCH
+        meta:
+          id: req_9e851b87486548bca592bb5ebca452ec
+          created: 1762116996625
+          modified: 1762116996625
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996625
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: '{"email":"dreamfactory_patch@example.com"}'
+        headers:
+          - name: X-DreamFactory-Api-Key
+            value: "{{ dreamfactory_key }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ dreamfactory_url }}/user_account/103719"
+        name: HTTP - DELETE
+        meta:
+          id: req_9f1343146b014eeb977aeed984ef9ba8
+          created: 1762116996626
+          modified: 1762624519484
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996626
+        method: DELETE
+        headers:
+          - name: X-DreamFactory-Api-Key
+            value: "{{ dreamfactory_key }}"
+            id: pair_995dc656e5a140dba609948392a1dcb5
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: NocoDB
+    meta:
+      id: fld_7aee898cd7684c17ae2e94458809e46c
+      created: 1762116996626
+      modified: 1762116996626
+      sortKey: -1762116996626
+      description: ""
+    children:
+      - url: "{{ nocodb_url }}/tables/mnjffmzxhy9jt2t/records/1"
+        name: HTTP - GET
+        meta:
+          id: req_4bfdbca515834893ae8e3416fc4f1564
+          created: 1762116996627
+          modified: 1763437975102
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996627
+        method: GET
+        headers:
+          - name: xc-token
+            value: "{{ nocodb_token }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ nocodb_url }}/tables/maf7g96edwj108j/records"
+        name: HTTP - PUT
+        meta:
+          id: req_55aedb92ac314dc6a278ef92b77657f0
+          created: 1762116996628
+          modified: 1762123851264
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996628
+        method: PUT
+        body:
+          mimeType: application/json
+          text: '{"id": 1110, "name":"Atualizado NocoDB",
+            "email":"nocodb_upd@example.com"}'
+        headers:
+          - name: xc-token
+            value: "{{ nocodb_token }}"
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ nocodb_url }}/tables/mnjffmzxhy9jt2t/records"
+        name: HTTP - POST
+        meta:
+          id: req_59f9dd747c684a2dbe67ee9f3a7e000f
+          created: 1762116996628
+          modified: 1763438093338
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996628
+        method: POST
+        body:
+          mimeType: application/json
+          text: '{"name":"Produto Teste NocoDB","price":1}'
+        headers:
+          - name: xc-token
+            value: "{{ nocodb_token }}"
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ nocodb_url }}/tables/maf7g96edwj108j/records"
+        name: HTTP - PATCH
+        meta:
+          id: req_5238b6965954480b91e61ec82af4eee4
+          created: 1762116996629
+          modified: 1762120407415
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996629
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: '{"id": 1, "email":"nocodb_patch@example.com"}'
+        headers:
+          - name: xc-token
+            value: "{{ nocodb_token }}"
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ nocodb_url }}/tables/meojvvjdxo6s78s/records"
+        name: HTTP - DELETE
+        meta:
+          id: req_91ba5bd6004b4401a56fa714f1f03551
+          created: 1762116996630
+          modified: 1762187392010
+          isPrivate: false
+          description: ""
+          sortKey: -1762116996630
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: '{"id": 4}'
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_e11753b064ae454e9ea1a5cb3d5a1ad5
+          - name: xc-token
+            value: "{{ nocodb_token }}"
+            id: pair_3469a1da156244219cec05575d57d564
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_19f6aa1eb54644a18e07ed38fb511875
+    created: 1762116996604
+    modified: 1762116996604
+environments:
+  name: Base Environment
+  meta:
+    id: env_232b16754da746ebb671d5411f234d2c
+    created: 1762116996601
+    modified: 1762116996601
+    isPrivate: false
+  data:
+    postgrest_url: http://localhost:3000
+    prest_url: http://localhost:3001/marketplace/public
+    dreamfactory_url: http://localhost:3002/api/v2/public/_table
+    dreamfactory_key: 46624cdc2e657389f229066bf9092e8accea917c0c426fe2b8e0ac2edf80b0ac
+    nocodb_url: http://localhost:8080/api/v2
+    nocodb_token: wYf774fyGotOY30u0yHQnzb7p6VYsT-t5UCRE97W
+    nocodb_baseid: pqqu3zwasd04h2z

@@ -1,0 +1,158 @@
+{
+    "metrics": {
+        "http_req_waiting": {
+            "avg": 1191.0778470035561,
+            "min": 34.5358,
+            "med": 782.0517,
+            "max": 10165.7445,
+            "p(90)": 2961.650520000001,
+            "p(95)": 3630.8217050000007
+        },
+        "http_req_receiving": {
+            "med": 0,
+            "max": 1.4365,
+            "p(90)": 0,
+            "p(95)": 0.5238,
+            "avg": 0.051311697985441,
+            "min": 0
+        },
+        "group_duration": {
+            "avg": 1391.722175656004,
+            "min": 235.0786,
+            "med": 982.6972499999999,
+            "max": 10366.2063,
+            "p(90)": 3162.15742,
+            "p(95)": 3831.6012200000005
+        },
+        "http_req_blocked": {
+            "avg": 0.001679084137464026,
+            "min": 0,
+            "med": 0,
+            "max": 2.3043,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "iteration_duration": {
+            "avg": 1391.7259771119031,
+            "min": 235.0786,
+            "med": 982.6972499999999,
+            "max": 10366.2063,
+            "p(90)": 3162.15742,
+            "p(95)": 3831.6012200000005
+        },
+        "checks": {
+            "passes": 11814,
+            "fails": 0,
+            "value": 1
+        },
+        "iterations": {
+            "count": 11814,
+            "rate": 39.37558590494369
+        },
+        "data_sent": {
+            "count": 2565102,
+            "rate": 8549.381594374714
+        },
+        "http_reqs": {
+            "count": 11814,
+            "rate": 39.37558590494369
+        },
+        "data_received": {
+            "count": 6237050,
+            "rate": 20787.836301712294
+        },
+        "http_req_duration": {
+            "p(90)": 2961.8061300000004,
+            "p(95)": 3630.8217050000007,
+            "avg": 1191.1297781276457,
+            "min": 34.5358,
+            "med": 782.0517,
+            "max": 10165.7445
+        },
+        "http_req_tls_handshaking": {
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0
+        },
+        "vus": {
+            "value": 1,
+            "min": 1,
+            "max": 100
+        },
+        "http_req_connecting": {
+            "p(95)": 0,
+            "avg": 0.0011586338242762827,
+            "min": 0,
+            "med": 0,
+            "max": 1.0008,
+            "p(90)": 0
+        },
+        "http_req_sending": {
+            "p(95)": 0,
+            "avg": 0.0006194261046216353,
+            "min": 0,
+            "med": 0,
+            "max": 1.0047,
+            "p(90)": 0
+        },
+        "vus_max": {
+            "min": 100,
+            "max": 100,
+            "value": 100
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 11814,
+            "value": 0
+        },
+        "http_req_duration{expected_response:true}": {
+            "avg": 1191.1297781276457,
+            "min": 34.5358,
+            "med": 782.0517,
+            "max": 10165.7445,
+            "p(90)": 2961.8061300000004,
+            "p(95)": 3630.8217050000007
+        }
+    },
+    "root_group": {
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "GET - Leitura": {
+                "groups": {},
+                "checks": {
+                        "GET status 200": {
+                            "passes": 9494,
+                            "fails": 0,
+                            "name": "GET status 200",
+                            "path": "::GET - Leitura::GET status 200",
+                            "id": "3c396777697fa4e979948e22ed5ffc49"
+                        }
+                    },
+                "name": "GET - Leitura",
+                "path": "::GET - Leitura",
+                "id": "a8dc8671aa8f678183c9fe9505f023c6"
+            },
+            "POST - Criar": {
+                "checks": {
+                    "POST 2xx": {
+                        "path": "::POST - Criar::POST 2xx",
+                        "id": "23c56a15f3bb810e65f1446f7bbe780c",
+                        "passes": 2320,
+                        "fails": 0,
+                        "name": "POST 2xx"
+                    }
+                },
+                "name": "POST - Criar",
+                "path": "::POST - Criar",
+                "id": "b7339abd7b80c3ed1328194f78ad747b",
+                "groups": {}
+            }
+        },
+        "checks": {},
+        "name": ""
+    }
+}

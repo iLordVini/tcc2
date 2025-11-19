@@ -1,0 +1,23 @@
+services:
+  dreamfactory:
+    image: dreamfactorysoftware/df-docker:latest
+    container_name: dreamfactory_api
+    restart: always
+    environment:
+      DB_DRIVER: pgsql
+      DB_HOST: postgres_database
+      DB_PORT: 5432
+      DB_DATABASE: marketplace
+      DB_USERNAME: admin
+      DB_PASSWORD: admin123
+      APP_KEY: base64:p5dk5ROC22Vv2HWXql6QIRCH80YO8mUbBeNfXN7VE+M=
+      DF_INSTALL: 'true'
+    ports:
+      - "3002:80"
+    networks:
+      - test_network
+
+networks:
+  test_network:
+    external: true
+    name: test_network

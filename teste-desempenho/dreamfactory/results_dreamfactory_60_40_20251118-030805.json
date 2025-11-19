@@ -1,0 +1,39 @@
+{
+  "ferramenta": "DreamFactory",
+  "cenario": "60/40",
+  "timestamp": "20251118-030805",
+  "testes": {
+    "load": {
+      "avg_ms": 280.9820227500259,
+      "p95_ms": 551.7182599999996,
+      "throughput_rps": 42.675537391204614,
+      "fail_rate": 0,
+      "success_rate": 1,
+      "peak_mem_gb": 1.056
+    },
+    "stress": {
+      "avg_ms": 694.3782571408964,
+      "p95_ms": 1585.92538,
+      "throughput_rps": 45.47326560937982,
+      "fail_rate": 0,
+      "success_rate": 1,
+      "peak_mem_gb": 1.104
+    },
+    "spike": {
+      "avg_ms": 1243.9699981228034,
+      "p95_ms": 4034.8429699999983,
+      "throughput_rps": 37.97287909889337,
+      "fail_rate": 0,
+      "success_rate": 1,
+      "peak_mem_gb": 1.936
+    },
+    "soak": {
+      "avg_ms": 155.0861430874232,
+      "p95_ms": 321.57607999999993,
+      "throughput_rps": 37.11523211753384,
+      "fail_rate": 0,
+      "success_rate": 1,
+      "peak_mem_gb": 1.249
+    }
+  }
+}

@@ -1,0 +1,24 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: postgres_database
+    restart: always
+    environment:
+      POSTGRES_DB: marketplace
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./seed.sql:/docker-entrypoint-initdb.d/seed.sql
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - test_network
+
+volumes:
+  postgres_data:
+
+networks:
+  test_network:
+    name: test_network
+    driver: bridge

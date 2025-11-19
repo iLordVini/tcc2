@@ -1,0 +1,158 @@
+{
+    "metrics": {
+        "http_req_blocked": {
+            "avg": 0.0008601532742176309,
+            "min": 0,
+            "med": 0,
+            "max": 32.3279,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "http_req_waiting": {
+            "p(90)": 203.82583000000002,
+            "p(95)": 224.50006,
+            "avg": 97.0720698205192,
+            "min": 6.5777,
+            "med": 79.8472,
+            "max": 389.9553
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 65634,
+            "value": 0
+        },
+        "http_req_duration{expected_response:true}": {
+            "max": 389.9553,
+            "p(90)": 203.87539,
+            "p(95)": 224.51780499999998,
+            "avg": 97.11492185300261,
+            "min": 6.7121,
+            "med": 79.94465
+        },
+        "http_req_sending": {
+            "avg": 0.0005897949233628913,
+            "min": 0,
+            "med": 0,
+            "max": 1.0016,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "group_duration": {
+            "max": 590.492,
+            "p(90)": 404.41235,
+            "p(95)": 425.00781,
+            "avg": 297.63368081939285,
+            "min": 206.8271,
+            "med": 280.4837
+        },
+        "http_req_duration": {
+            "min": 6.7121,
+            "med": 79.94465,
+            "max": 389.9553,
+            "p(90)": 203.87539,
+            "p(95)": 224.51780499999998,
+            "avg": 97.11492185300261
+        },
+        "vus_max": {
+            "value": 50,
+            "min": 50,
+            "max": 50
+        },
+        "checks": {
+            "passes": 65634,
+            "fails": 0,
+            "value": 1
+        },
+        "http_req_receiving": {
+            "p(95)": 0.5153,
+            "avg": 0.042262237559801456,
+            "min": 0,
+            "med": 0,
+            "max": 6.4381,
+            "p(90)": 0
+        },
+        "data_received": {
+            "count": 34314800,
+            "rate": 71461.3754122078
+        },
+        "iterations": {
+            "count": 65634,
+            "rate": 136.68434360115305
+        },
+        "http_reqs": {
+            "count": 65634,
+            "rate": 136.68434360115305
+        },
+        "http_req_connecting": {
+            "avg": 0.00014149526160221835,
+            "min": 0,
+            "med": 0,
+            "max": 0.5335,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "vus": {
+            "value": 1,
+            "min": 1,
+            "max": 50
+        },
+        "iteration_duration": {
+            "max": 590.492,
+            "p(90)": 404.41235,
+            "p(95)": 425.00781,
+            "avg": 297.63821383886454,
+            "min": 206.8716,
+            "med": 280.49295
+        },
+        "http_req_tls_handshaking": {
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "data_sent": {
+            "rate": 28548.612057842176,
+            "count": 13708663
+        }
+    },
+    "root_group": {
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "GET - Leitura": {
+                "groups": {},
+                "checks": {
+                        "GET status 200": {
+                            "path": "::GET - Leitura::GET status 200",
+                            "id": "3c396777697fa4e979948e22ed5ffc49",
+                            "passes": 52563,
+                            "fails": 0,
+                            "name": "GET status 200"
+                        }
+                    },
+                "name": "GET - Leitura",
+                "path": "::GET - Leitura",
+                "id": "a8dc8671aa8f678183c9fe9505f023c6"
+            },
+            "POST - Criar": {
+                "path": "::POST - Criar",
+                "id": "b7339abd7b80c3ed1328194f78ad747b",
+                "groups": {},
+                "checks": {
+                        "POST 200": {
+                            "passes": 13071,
+                            "fails": 0,
+                            "name": "POST 200",
+                            "path": "::POST - Criar::POST 200",
+                            "id": "0ba96c50ae0a444c2d63b095cacf4d52"
+                        }
+                    },
+                "name": "POST - Criar"
+            }
+        },
+        "checks": {},
+        "name": "",
+        "path": ""
+    }
+}

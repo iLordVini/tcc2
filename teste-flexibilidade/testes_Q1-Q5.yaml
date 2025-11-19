@@ -1,0 +1,475 @@
+type: collection.insomnia.rest/5.0
+name: TCC 2 - Q1-Q5
+meta:
+  id: wrk_df724a6b37f34de9bcba9402ccf3e613
+  created: 1762109215836
+  modified: 1762109215836
+  description: ""
+collection:
+  - name: PostgREST
+    meta:
+      id: fld_81f7e88805924f5780fef683f57d44b7
+      created: 1761791131090
+      modified: 1761866171794
+      sortKey: -1761791131090
+      description: ""
+    children:
+      - url: "{{ postgrest_url }}/clients?id=eq.1&select=id,name"
+        name: Q1 - Consulta Simples
+        meta:
+          id: req_153bff206d7743aeb3023064a42ffc6e
+          created: 1761791131091
+          modified: 1761791131091
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131091
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ postgrest_url }}/products?select=id,name&order=name.asc&limit=10"
+        name: Q2 - Ordenação & Paginação
+        meta:
+          id: req_01ac250694da490f93d0880d513f8459
+          created: 1761791131092
+          modified: 1761791131092
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131092
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ postgrest_url
+          }}/orders?client_id=eq.1&select=id,order_number,clients(name)"
+        name: Q4 - JOIN Simples
+        meta:
+          id: req_6beaa36c129e41fea567c6977e4c5702
+          created: 1761791131092
+          modified: 1761794143662
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131092
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ postgrest_url
+          }}/clients?id=eq.1&select=name,orders(order_items(products(name)))"
+        name: Q5 - JOIN Múltiplo
+        meta:
+          id: req_bef4a248f4ba47b982f198c35d245c40
+          created: 1761791131093
+          modified: 1762038428958
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131093
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ postgrest_url }}/orders?client_id=eq.1&select=total_orders:count(),
+          client_id&order=client_id"
+        name: Q3 - Agregação
+        meta:
+          id: req_dd9fb5195455476b8b23a49925b35a3e
+          created: 1761791131094
+          modified: 1762049132614
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131094
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: pREST
+    meta:
+      id: fld_20b7309fe4d84ed586f465bf24a95762
+      created: 1761791131095
+      modified: 1761866174562
+      sortKey: -1761791131095
+      description: ""
+    children:
+      - url: "{{ prest_url
+          }}/products?_select=id,name&_order=name&_page_size=10&_page=1"
+        name: Q2 - Ordenação & Paginação
+        meta:
+          id: req_10516f09a74e4640adb9d41e44174855
+          created: 1761791131096
+          modified: 1761866152132
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131096
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ prest_url }}/clients?id=1&_select=id,name"
+        name: Q1 - Consulta Simples
+        meta:
+          id: req_bcd4f5e007e141fbab24862df5265d46
+          created: 1761791131096
+          modified: 1761791131096
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131096
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ prest_url
+          }}/orders?client_id=1&_join=inner:clients:orders.client_id:$eq:client\
+          s.id&_select=orders.id,orders.order_number,clients.name"
+        name: Q4 - JOIN Simples
+        meta:
+          id: req_e641ed094be04601916a592c4188fe0e
+          created: 1761791131097
+          modified: 1761869768677
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131097
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ prest_url
+          }}/orders?client_id=1&_join=inner:clients:orders.client_id:$eq:client\
+          s.id&_select=orders.id,clients.name"
+        name: Q5 - JOIN Múltiplo [FALHA]
+        meta:
+          id: req_9b6f9fad13cb4ad2b693880828dd3453
+          created: 1761791131098
+          modified: 1762048994970
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131098.5
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ prest_url
+          }}/orders?_count=*&_select=client_id&_groupby=client_id&client_id=1"
+        name: Q3 - Agregação
+        meta:
+          id: req_a4695d1d671d40b682170328a9ecaf28
+          created: 1761791131099
+          modified: 1762049243551
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131099
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: DreamFactory
+    meta:
+      id: fld_b5cc9a75ba604d54ad5a73416ea2eb3a
+      created: 1761791131100
+      modified: 1761791131100
+      sortKey: -1761791131100
+      description: ""
+    children:
+      - url: "{{ dreamfactory_url }}/clients?filter=(id=1)&fields=id,name"
+        name: Q1 - Consulta Simples
+        meta:
+          id: req_9df1a48babfa4d10ac96cb1f8d571ec2
+          created: 1761791131100
+          modified: 1762186114330
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131100
+        method: GET
+        headers:
+          - name: X-DreamFactory-Api-Key
+            value: "{{ dreamfactory_key }}"
+            id: pair_4225ae0f48804387b4f5343cb158d013
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ dreamfactory_url
+          }}/orders?fields=id,order_number&filter=(client_id=1)&related=clients\
+          _by_client_id&clients_by_client_id.fields=name"
+        name: Q4 - JOIN Simples
+        meta:
+          id: req_1ed10a06a63d4b6db9463d91b53c5a7b
+          created: 1761791131101
+          modified: 1762044992780
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131101
+        method: GET
+        headers:
+          - name: X-DreamFactory-Api-Key
+            value: "{{ dreamfactory_key }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ dreamfactory_url }}/products?fields=id,name&order=name%20ASC&limit=10"
+        name: Q2 - Ordenação & Paginação
+        meta:
+          id: req_56ac70e87b2946d996ba9cbbf8a5d237
+          created: 1761791131101
+          modified: 1761791131101
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131101
+        method: GET
+        headers:
+          - name: X-DreamFactory-Api-Key
+            value: "{{ dreamfactory_key }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ dreamfactory_url
+          }}/clients?fields=name&related=orders_by_client_id&orders_by_client_i\
+          d.fields=id&filter=(id=1)"
+        name: Q5 - JOIN Múltiplo [FALHA]
+        meta:
+          id: req_109fa9f7d5e640f9b7c326f1e90c1f07
+          created: 1761791131102
+          modified: 1762043327109
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131103
+        method: GET
+        headers:
+          - name: X-DreamFactory-Api-Key
+            value: "{{ dreamfactory_key }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ dreamfactory_url
+          }}/orders?include_count=true&filter=(client_id=1)&group=client_id&fie\
+          lds=client_id"
+        name: Q3 - Agregação
+        meta:
+          id: req_941522f75c6a4e46babcff4854f6f2b1
+          created: 1761791131104
+          modified: 1762049274207
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131104
+        method: GET
+        headers:
+          - name: X-DreamFactory-Api-Key
+            value: "{{ dreamfactory_key }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: NocoDB
+    meta:
+      id: fld_01aa1a8e6dfb48d289ef5c1d93340ca0
+      created: 1761791131105
+      modified: 1761791131105
+      sortKey: -1761791131105
+      description: ""
+    children:
+      - url: "{{ nocodb_url
+          }}/tables/mai3tkpqzntgoe1/records?where=(id,eq,1)&fields=id,name"
+        name: Q1 - Consulta Simples
+        meta:
+          id: req_6cf919a5272f4eda8e9f3e83269ea6c9
+          created: 1761791131106
+          modified: 1762118692189
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131106
+        method: GET
+        headers:
+          - name: xc-token
+            value: "{{ nocodb_token }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ nocodb_url
+          }}/tables/mnjffmzxhy9jt2t/records?fields=id,name&sort=name&limit=10"
+        name: Q2 - Ordenação & Paginação
+        meta:
+          id: req_ef3e0aa063f9410cbc515d412458cf05
+          created: 1761791131106
+          modified: 1761876502326
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131106
+        method: GET
+        headers:
+          - name: xc-token
+            value: "{{ nocodb_token }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ nocodb_url
+          }}/tables/mc5uewk07um5jp6/records?where=(client_id,eq,1)&fields=id,or\
+          der_number,client_name&viewId=vws327tytg5vnfq8"
+        name: Q4 - JOIN Simples
+        meta:
+          id: req_34847ad68df34d9992dc2f6b3b07e68f
+          created: 1761791131107
+          modified: 1762044582957
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131107.5
+        method: GET
+        headers:
+          - name: xc-token
+            value: "{{ nocodb_token }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ nocodb_url
+          }}/tables/mc5uewk07um5jp6/records?where=(client_id,eq,1)&fields=id,or\
+          der_number,client_name,product_name&viewId=vws327tytg5vnfq8"
+        name: Q5 - JOIN Múltiplo
+        meta:
+          id: req_8403426d0b654c95a3d3a5a54918268f
+          created: 1761791131109
+          modified: 1762044588641
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131109.5
+        method: GET
+        headers:
+          - name: xc-token
+            value: "{{ nocodb_token }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ nocodb_url
+          }}/tables/mai3tkpqzntgoe1/records?where=(id,eq,1)&fields=id,orders_co\
+          unt&viewId=vwgq4dvf5oeabsou"
+        name: Q3 - Agregação
+        meta:
+          id: req_7f6d6895f4d2487590386e269e0c68a2
+          created: 1761791131111
+          modified: 1762049297176
+          isPrivate: false
+          description: ""
+          sortKey: -1761791131111
+        method: GET
+        headers:
+          - name: xc-token
+            value: "{{ nocodb_token }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_e01b71f8a78c456d856dd61722fe9f4b
+    created: 1761791131114
+    modified: 1761791131114
+environments:
+  name: Environment
+  meta:
+    id: env_bb9970b4fef64738acb5e7612647c8a0
+    created: 1761791131089
+    modified: 1761794449292
+    isPrivate: false
+  data:
+    postgrest_url: http://localhost:3000
+    prest_url: http://localhost:3001/marketplace/public
+    dreamfactory_url: http://localhost:3002/api/v2/public/_table
+    dreamfactory_key: 46624cdc2e657389f229066bf9092e8accea917c0c426fe2b8e0ac2edf80b0ac
+    nocodb_url: http://localhost:8080/api/v2
+    nocodb_token: wYf774fyGotOY30u0yHQnzb7p6VYsT-t5UCRE97W
+    nocodb_baseid: pqqu3zwasd04h2z

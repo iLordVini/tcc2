@@ -1,0 +1,18 @@
+services:
+  nocodb:
+    image: nocodb/nocodb:latest
+    container_name: nocodb_api
+    restart: always
+    environment:
+      NC_DB: "pg://postgres_database:5432?u=admin&p=admin123&d=marketplace"
+      NC_AUTH_JWT_SECRET: "wYf774fyGotOY30u0yHQnzb7p6VYsT-t5UCRE97W"
+    ports:
+      - "8080:8080"
+    networks:
+      - test_network
+
+networks:
+  test_network:
+    external: true
+
+
