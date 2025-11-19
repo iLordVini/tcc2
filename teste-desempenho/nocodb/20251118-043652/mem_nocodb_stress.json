@@ -1,8 +1,0 @@
-{
-  "hint": "nocodb",
-  "tag": "stress",
-  "started_at": "2025-11-18T04:47:57.051815",
-  "ended_at": "2025-11-18T04:55:58.411009",
-  "peak_mem_gb": 0.656641,
-  "cmd_rc": 0
-}

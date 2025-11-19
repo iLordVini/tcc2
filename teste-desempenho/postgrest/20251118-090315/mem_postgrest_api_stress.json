@@ -1,8 +1,0 @@
-{
-  "hint": "postgrest_api",
-  "tag": "stress",
-  "started_at": "2025-11-18T09:14:19.906388",
-  "ended_at": "2025-11-18T09:22:21.195764",
-  "peak_mem_gb": 0.040127,
-  "cmd_rc": 0
-}
