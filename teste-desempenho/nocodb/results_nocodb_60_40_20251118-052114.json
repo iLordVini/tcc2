@@ -1,0 +1,39 @@
+{
+  "ferramenta": "NocoDB",
+  "cenario": "60/40",
+  "timestamp": "20251118-052114",
+  "testes": {
+    "load": {
+      "avg_ms": 15.5818130727805,
+      "p95_ms": 30.722725,
+      "throughput_rps": 95.08833497019555,
+      "fail_rate": 0,
+      "success_rate": 1,
+      "peak_mem_gb": 0.631055
+    },
+    "stress": {
+      "avg_ms": 92.61784605065868,
+      "p95_ms": 206.814795,
+      "throughput_rps": 138.83092708214804,
+      "fail_rate": 0,
+      "success_rate": 1,
+      "peak_mem_gb": 0.651953
+    },
+    "spike": {
+      "avg_ms": 297.6529471898192,
+      "p95_ms": 516.37395,
+      "throughput_rps": 109.71498511088889,
+      "fail_rate": 0,
+      "success_rate": 1,
+      "peak_mem_gb": 0.685547
+    },
+    "soak": {
+      "avg_ms": 12.4317987309611,
+      "p95_ms": 22.62069999999998,
+      "throughput_rps": 61.979799623394705,
+      "fail_rate": 0,
+      "success_rate": 1,
+      "peak_mem_gb": 0.68584
+    }
+  }
+}
