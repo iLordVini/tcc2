@@ -1,4 +1,5 @@
-# TCC 2 — Comparação de Ferramentas API-First sobre PostgreSQL
+# TCC 2 — Análise Comparativa de Ferramentas para Geração de APIs REST a partir de
+Bancos de Dados PostgreSQL
 
 Este repositório contém os artefatos do TCC 2, incluindo os testes de desempenho e flexibilidade das ferramentas **PostgREST**, **pREST**, **DreamFactory** e **NocoDB**.
 
